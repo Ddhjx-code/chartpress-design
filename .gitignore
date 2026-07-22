@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output (M2)
+dist/
+
+# Env / secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
