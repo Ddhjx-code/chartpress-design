@@ -87,6 +87,112 @@ open chartpress-design.html        # macOS
 
 ---
 
+## 调研所需 MCP 服务器配置
+
+> 底衫数据调研（验证型号热度、补全数据）需要以下 MCP。本机网络无法访问，需在另一台机器配置后补做。
+> 全部通过 `uvx` 从 PyPI 自动安装运行，无需手动 clone。
+
+### 底衫调研优先级
+
+| 优先级 | MCP | 用途（针对 ChartPress） |
+|--------|-----|------------------------|
+| 🔴 必需 | `niche-google-trends-mcp` | 对比各底衫型号搜索热度（gildan 5000 vs 64000 vs 18000…），确认是否漏热门型号 |
+| 🔴 必需 | `niche-reddit-mcp` | 看 r/printondemand、r/EtsySellers 卖家实际常用哪些底衫 |
+| 🟡 有用 | `niche-g2-mcp` | 分析现有 size chart 工具竞品差评 |
+| 🟡 有用 | `niche-hackernews-mcp` | 开发者/卖家社区讨论 |
+| 🟢 可选 | `niche-producthunt-mcp` | 发现新兴尺码表工具 |
+| 🟢 可选 | `niche-github-issues-mcp` | 开源尺码表工具的功能请求 |
+| 🟢 可选 | `niche-alternativeto-mcp` | 替代品需求 |
+
+### 配置方法
+
+写入 `~/.claude/settings.local.json` 的 `mcpServers` 字段（用 `settings.local.json` 避免污染全局）：
+
+```json
+{
+  "mcpServers": {
+    "niche-reddit-mcp": {
+      "command": "uvx",
+      "args": ["niche-reddit-mcp"],
+      "env": {
+        "REDDIT_CLIENT_ID": "",
+        "REDDIT_CLIENT_SECRET": ""
+      }
+    },
+    "niche-google-trends-mcp": {
+      "command": "uvx",
+      "args": ["niche-google-trends-mcp"]
+    },
+    "niche-producthunt-mcp": {
+      "command": "uvx",
+      "args": ["niche-producthunt-mcp"],
+      "env": {
+        "PRODUCTHUNT_TOKEN": ""
+      }
+    },
+    "niche-g2-mcp": {
+      "command": "uvx",
+      "args": ["niche-g2-mcp"]
+    },
+    "niche-github-issues-mcp": {
+      "command": "uvx",
+      "args": ["niche-github-issues-mcp"],
+      "env": {
+        "GITHUB_TOKEN": ""
+      }
+    },
+    "niche-hackernews-mcp": {
+      "command": "uvx",
+      "args": ["niche-hackernews-mcp"]
+    },
+    "niche-alternativeto-mcp": {
+      "command": "uvx",
+      "args": ["niche-alternativeto-mcp"]
+    }
+  }
+}
+```
+
+写入后**重启会话**使 MCP 生效。
+
+### PyPI 包地址（uvx 自动拉取）
+
+| MCP 服务器 | PyPI 包 | 包地址 | 需要凭证 |
+|-----------|---------|--------|---------|
+| niche-reddit-mcp | `niche-reddit-mcp` | https://pypi.org/project/niche-reddit-mcp/ | Reddit OAuth2 |
+| niche-google-trends-mcp | `niche-google-trends-mcp` | https://pypi.org/project/niche-google-trends-mcp/ | 无 |
+| niche-producthunt-mcp | `niche-producthunt-mcp` | https://pypi.org/project/niche-producthunt-mcp/ | PH Developer Token |
+| niche-g2-mcp | `niche-g2-mcp` | https://pypi.org/project/niche-g2-mcp/ | 无（浏览器自动化） |
+| niche-github-issues-mcp | `niche-github-issues-mcp` | https://pypi.org/project/niche-github-issues-mcp/ | GitHub Token（可选） |
+| niche-hackernews-mcp | `niche-hackernews-mcp` | https://pypi.org/project/niche-hackernews-mcp/ | 无 |
+| niche-alternativeto-mcp | `niche-alternativeto-mcp` | https://pypi.org/project/niche-alternativeto-mcp/ | 无 |
+
+### 凭证获取地址
+
+| 凭证 | 获取地址 | 步骤 |
+|------|---------|------|
+| **Reddit** `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` | https://www.reddit.com/prefs/apps | 创建 "script" 类型 app → client_id 在 app 名下方，client_secret 单独列出 |
+| **Product Hunt** `PRODUCTHUNT_TOKEN` | https://www.producthunt.com/v2/oauth/applications | 创建应用 → 获取 Developer Token |
+| **GitHub** `GITHUB_TOKEN`（可选） | https://github.com/settings/tokens | 创建 Personal Access Token (Classic)，勾选 `public_repo`。无 token 也能用（60 请求/小时），有 token 达 5000/小时 |
+
+> Google Trends / G2 / Hacker News / AlternativeTo **无需凭证**。
+> Google Trends 走真实 Chrome 浏览器，可能受 Google 限流（429）；G2 有 CAPTCHA，首次需手动验证（`uvx niche-g2-mcp --login`）。
+
+### 底衫调研具体用法（配好后执行）
+
+```
+# 1. Google Trends 对比型号热度（每批最多 5 个）
+trends_compare(keywords=["gildan 5000","gildan 64000","gildan 18000","bella canvas 3001","comfort colors 1717"], timeframe="12m", geo="US")
+
+# 2. 关联查询发现遗漏型号
+trends_related_queries(keyword="gildan size chart", timeframe="12m")
+
+# 3. Reddit 看卖家实际用哪些底衫
+reddit_search_pain_points(subreddits=["printondemand","EtsySellers"], keywords=["best blank tshirt","which blank","gildan 5000 vs"], time_filter="year")
+```
+
+---
+
 ## 文件结构（当前 / 目标）
 
 ```
