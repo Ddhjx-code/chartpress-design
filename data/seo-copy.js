@@ -12,6 +12,12 @@ const SEO_COPY = {
   gildan5000b: {
     blurb: "The Gildan 5000B is the youth version of the iconic Heavy Cotton tee, cut for kids and teens. Same 6.0 oz/yd² preshrunk cotton as the adult 5000, sized down for younger wearers. If you sell family or kids' designs, a dedicated youth size chart prevents the #1 cause of youth apparel returns: ordering an adult size by mistake. Youth sizes run S (6–8) through XL (12–14).",
   },
+  gildan5100p: {
+    blurb: "The Gildan 5100P is the toddler Heavy Cotton tee, sized 2T through 6T for the littlest customers. At 5.3 oz/yd² of a soft 90/10 US cotton-poly blend, it's built to survive toddler wear while staying comfortable. A dedicated toddler size chart is essential for family and kids' shops — parents sizing for fast-growing little ones are especially prone to 'doesn't fit' returns without clear measurements. Gildan lists sleeve as 'center back' (measured from the center neckline, across the shoulder, to the cuff).",
+  },
+  gildan5400b: {
+    blurb: "The Gildan 5400B is the youth long-sleeve Heavy Cotton tee, sized XS through XL for kids and teens. At 5.3 oz/yd² of 100% US cotton, it's the cool-weather sibling of the 5000B short sleeve — the same trusted Heavy Cotton youth fit with full-length sleeves. A dedicated youth long-sleeve size chart helps family and kids' shops set accurate expectations and cut 'doesn't fit' returns. Gildan measures sleeve from center back (center neckline, across the shoulder, to the cuff).",
+  },
   gildan64000: {
     blurb: "The Gildan 64000 Softstyle is the lighter, softer sibling of the 5000. At 4.5 oz/yd² (153 GSM) of ring-spun cotton, it has a smoother, more fashion-forward hand and a slightly slimmer cut — the go-to when you want a tee that feels premium rather than utilitarian. Popular for boutique and streetwear-style POD shops that find the 5000 too heavy.",
   },

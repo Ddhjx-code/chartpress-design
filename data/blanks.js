@@ -24,6 +24,22 @@ const BLANKS = {
       { s: "L", chest: 18, length: 26, sleeve: 14.5 }, { s: "XL", chest: 19.5, length: 28, sleeve: 15.5 },
     ],
   },
+  gildan5100p: {
+    brand: "Gildan", model: "5100P", name: "Toddler Heavy Cotton Tee", slug: "gildan-5100p-toddler", audience: "TODDLER",
+    sizes: [
+      { s: "2T", chest: 11, length: 15, sleeve: 9 }, { s: "3T", chest: 12, length: 16, sleeve: 10 },
+      { s: "4T", chest: 13, length: 17, sleeve: 11 }, { s: "5T", chest: 14, length: 18, sleeve: 11.5 },
+      { s: "6T", chest: 15, length: 19, sleeve: 12.5 },
+    ],
+  },
+  gildan5400b: {
+    brand: "Gildan", model: "5400B", name: "Youth Long Sleeve Tee", slug: "gildan-5400b-youth", audience: "YOUTH",
+    sizes: [
+      { s: "XS", chest: 16, length: 20.5, sleeve: 23 }, { s: "S", chest: 17, length: 22, sleeve: 24.5 },
+      { s: "M", chest: 18, length: 23.5, sleeve: 26.5 }, { s: "L", chest: 19, length: 25, sleeve: 29 },
+      { s: "XL", chest: 20, length: 26.5, sleeve: 31 },
+    ],
+  },
   gildan64000: {
     brand: "Gildan", model: "64000", name: "Softstyle Tee", slug: "gildan-64000",
     sizes: [
