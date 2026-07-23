@@ -22,7 +22,7 @@ const SEO_COPY = {
     blurb: "The Gildan 64000 Softstyle is the lighter, softer sibling of the 5000. At 4.5 oz/yd² (153 GSM) of ring-spun cotton, it has a smoother, more fashion-forward hand and a slightly slimmer cut — the go-to when you want a tee that feels premium rather than utilitarian. Popular for boutique and streetwear-style POD shops that find the 5000 too heavy.",
   },
   gildan18500: {
-    blurb: "The Gildan 18500 Heavy Blend Crewneck is the default POD sweatshirt. Its 8.0 oz/yd² (271 GSM) 50/50 cotton-poly fleece is warm, durable, and resists pilling, with a pill-resistant air-jet yarn surface that takes prints cleanly. A staple for fall and winter listings — pair it with the matching 18000 hoodie for a full apparel line.",
+    blurb: "The Gildan 18500 Heavy Blend Hoodie is one of the most popular print-on-demand hoodies. Its 8.0 oz/yd² 60/40 polyester-cotton Heavy Blend fleece is warm, durable, and pill-resistant, with a double-lined hood and kangaroo pouch pocket that take prints cleanly. A staple for fall and winter listings — pair it with the matching 18000 crewneck for a full apparel line. Gildan measures sleeve from center back (center neckline, across the shoulder, to the cuff).",
   },
   gildan18000: {
     blurb: "The Gildan 18000 Heavy Blend Hoodie is the single most popular print-on-demand hoodie. Built on the same 8.0 oz/yd² 50/50 cotton-poly fleece as the 18500 crewneck, it adds a double-lined hood and kangaroo pouch pocket. If you sell hoodies at all, this is almost certainly the blank your supplier prints on — a dedicated size chart for it is essential.",
