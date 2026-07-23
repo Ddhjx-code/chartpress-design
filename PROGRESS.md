@@ -17,7 +17,7 @@
 | 里程碑 | 状态 | 说明 |
 |--------|------|------|
 | **M1 单页工具** | ✅ 已完成 | 14 底衫（12 成人 + 2 青少年）+ 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
-| **M2 Programmatic SEO** | ⏳ 待开始 | 每型号独立 URL 页 + 构建脚本 + sitemap |
+| **M2 Programmatic SEO** | ✅ 已完成（本地构建，待部署） | 14 个型号独立 URL 页 + 构建脚本 + sitemap |
 | **M3 上线 + 观察** | ⏳ 待开始 | 部署 + 提交收录 + 埋点 |
 | **M4 验证后扩展** | ⏳ 待定 | 扩底衫库 / 自定义数据 / PDF / Logo |
 
@@ -97,13 +97,23 @@
 - [ ] 核对维度：chest（胸宽×2=体围）、length（衣长）、sleeve（袖长，确认是肩缝起还是后中起）
 - [ ] 每个底衫标注数据来源 + 核对日期（放进 `data/blanks.js` 注释）
 
-### 🟢 M2：Programmatic SEO 多页
-- [ ] `data/blanks.js`：抽出共享数据（与主页面共用）
-- [ ] `templates/seo-page.html`：型号页模板（含占位符 + 静态表格）
-- [ ] `scripts/build-seo-pages.js`：为每个 slug 生成 HTML + `sitemap.xml`
-- [ ] 每页 `<title>` / `<meta description>` / canonical / OG 标签
-- [ ] 内链（同品牌型号 + 主工具页）
-- [ ] 部署到 Vercel / Netlify，提交 sitemap
+### ✅ M2：Programmatic SEO 多页（已构建，待部署）
+- [x] `data/blanks.js`：单一数据源（BLANKS+THEMES，UMD，浏览器/Node 共用）
+- [x] `data/seo-copy.js`：14 个型号各自的 SEO 文案（面料/版型/POD 场景）
+- [x] `templates/seo-page.html`：型号页模板（静态表格 + 交互生成器 + 占位符）
+- [x] `scripts/build-seo-pages.js`：为每个 slug 生成 HTML + `sitemap.xml` + index
+- [x] 每页 `<title>` / `<meta description>` / canonical / OG 标签
+- [x] 内链（同品牌优先 + 其他热门，8 条）
+- [x] 主页 `chartpress-design.html` 改用 `data/blanks.js`（单一数据源）
+- [ ] **部署到 Vercel / Netlify，提交 sitemap 到 Google Search Console**（下一步）
+
+**本地构建/预览**：
+```bash
+node scripts/build-seo-pages.js     # 生成 dist/（14 页 + sitemap + index + data）
+# 预览：用任意静态服务器打开 dist/，如
+npx serve dist
+```
+> `dist/` 是构建产物，已 gitignore，不入库。部署时部署 `dist/` 目录。
 
 ---
 
