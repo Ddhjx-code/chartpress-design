@@ -122,9 +122,11 @@ const BLANKS = {
   ascolour001: {
     brand: "AS Colour", model: "001", name: "Staple Tee", slug: "as-colour-001",
     sizes: [
-      { s: "S", chest: 18.5, length: 28, sleeve: 15.75 }, { s: "M", chest: 20.5, length: 29, sleeve: 16.5 },
-      { s: "L", chest: 22.5, length: 30, sleeve: 17.25 }, { s: "XL", chest: 24.5, length: 31, sleeve: 18 },
-      { s: "2XL", chest: 26.5, length: 32, sleeve: 18.75 }, { s: "3XL", chest: 28.5, length: 33, sleeve: 19.5 },
+      { s: "XS", chest: 17, length: 26.75 }, { s: "S", chest: 18.5, length: 28 },
+      { s: "M", chest: 20.5, length: 29.5 }, { s: "L", chest: 22.25, length: 31 },
+      { s: "XL", chest: 24, length: 32.25 }, { s: "2XL", chest: 25.25, length: 33 },
+      { s: "3XL", chest: 26.75, length: 33.5 }, { s: "4XL", chest: 29.5, length: 34.25 },
+      { s: "5XL", chest: 31.5, length: 35 },
     ],
   },
   championS700: {

@@ -43,7 +43,7 @@ const SEO_COPY = {
     blurb: "The Next Level 6210 CVC Crew blends 60% combed ring-spun cotton with 40% polyester (CVC = chief value cotton) for a soft hand and excellent shape retention. The cotton-rich blend resists shrinkage and keeps prints crisp over many washes — a reliable mid-weight crew for shops that want durability without a heavy feel. It shares the exact same cut as the 3600 — only the fabric differs. The official spec lists chest and body length (measured flat from the high point of shoulder).",
   },
   ascolour001: {
-    blurb: "The AS Colour 001 Staple Tee is the Australian brand's signature blank — a 5.0 oz (170 GSM) 100% combed cotton tee with a clean, regular fit and a smooth print surface. A favorite for streetwear and merch in AU, UK, and NZ markets. If you sell outside North America, this is one of the most-requested blanks your buyers will recognize.",
+    blurb: "The AS Colour 001 Staple Tee is the Australian brand's signature blank — a 5.0 oz (170 GSM) 100% combed cotton tee with a clean, regular fit and a smooth print surface. A favorite for streetwear and merch in AU, UK, and NZ markets. If you sell outside North America, this is one of the most-requested blanks your buyers will recognize. Note: AS Colour's official tolerance is ±1 inch (looser than most brands) — advise buyers to size up on borderline fits. The official spec lists body width and length (measured flat).",
   },
   championS700: {
     blurb: "The Champion S700 Powerblend Hoodie brings the iconic Champion brand to your POD line. Its mid-weight cotton-poly Powerblend fleece is soft, durable, and made to resist shrinkage and pilling, with the heritage Champion 'C' logo on the cuff. A strong choice when you want recognizable-brand hoodies in your shop.",
