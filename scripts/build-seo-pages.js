@@ -49,8 +49,9 @@ function staticTeeSVG(chest, length) {
 function renderStaticChart(b) {
   const t = THEMES.ink;
   const mid = b.sizes[Math.floor(b.sizes.length / 2)];
+  const hasSleeve = b.sizes[0].sleeve != null;
   const rows = b.sizes
-    .map(r => `<tr><td>${r.s}</td><td>${fmtIn(r.chest * 2)}</td><td>${fmtIn(r.length)}</td><td>${fmtIn(r.sleeve)}</td></tr>`)
+    .map(r => `<tr><td>${r.s}</td><td>${fmtIn(r.chest * 2)}</td><td>${fmtIn(r.length)}</td>${hasSleeve ? `<td>${fmtIn(r.sleeve)}</td>` : ""}</tr>`)
     .join("");
   return `
   <div class="chart" style="--c-bg:${t.bg};--c-fg:${t.fg};--c-ac:${t.ac};--c-border:${hexToRgba(t.fg, 0.22)}">
@@ -60,7 +61,7 @@ function renderStaticChart(b) {
     </div>
     <div class="c-mid">${staticTeeSVG(mid.chest, mid.length)}</div>
     <table>
-      <thead><tr><th>Size</th><th>Chest (in)</th><th>Length (in)</th><th>Sleeve (in)</th></tr></thead>
+      <thead><tr><th>Size</th><th>Chest (in)</th><th>Length (in)</th>${hasSleeve ? "<th>Sleeve (in)</th>" : ""}</tr></thead>
       <tbody>${rows}</tbody>
     </table>
     <div class="c-foot"><span>Flat garment measurement · ±0.5 in tolerance</span><span>chartpress</span></div>

@@ -194,7 +194,8 @@ function renderChart(){
   const el = document.getElementById("chart");
   const b = BLANKS[state.blank], t = THEMES[state.theme];
   const mid = b.sizes[Math.floor(b.sizes.length/2)];
-  const rows = b.sizes.map(r=>`<tr><td>${r.s}</td><td>${fmt(r.chest*2)}</td><td>${fmt(r.length)}</td><td>${fmt(r.sleeve)}</td></tr>`).join("");
+  const hasSleeve = b.sizes[0].sleeve != null;
+  const rows = b.sizes.map(r=>`<tr><td>${r.s}</td><td>${fmt(r.chest*2)}</td><td>${fmt(r.length)}</td>${hasSleeve?`<td>${fmt(r.sleeve)}</td>`:""}</tr>`).join("");
   el.innerHTML = `
   <div class="chart" style="--c-bg:${t.bg};--c-fg:${t.fg};--c-ac:${t.ac};--c-border:${hexToRgba(t.fg,.22)}">
     <div class="c-top">
@@ -203,7 +204,7 @@ function renderChart(){
     </div>
     <div class="c-mid">${teeSVG(mid.chest,mid.length)}</div>
     <table>
-      <thead><tr><th>Size</th><th>Chest (${unitLbl()})</th><th>Length (${unitLbl()})</th><th>Sleeve (${unitLbl()})</th></tr></thead>
+      <thead><tr><th>Size</th><th>Chest (${unitLbl()})</th><th>Length (${unitLbl()})</th>${hasSleeve?`<th>Sleeve (${unitLbl()})</th>`:""}</tr></thead>
       <tbody>${rows}</tbody>
     </table>
     <div class="c-foot"><span>Flat garment measurement · ±0.5${unitLbl()==="cm"?" cm":" in"} tolerance</span><span>chartpress</span></div>
@@ -214,8 +215,9 @@ function buildStandaloneSnippet(){
   const b = BLANKS[state.blank], t = THEMES[state.theme];
   const border = hexToRgba(t.fg,.22);
   const th = label => `<th style="text-align:left;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border-bottom:2px solid ${t.fg};color:${t.ac}">${label}</th>`;
-  const rows = b.sizes.map(r=>`<tr><td style="font-weight:600;padding:7px 10px;border-bottom:1px solid ${border}">${r.s}</td><td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.chest*2)}</td><td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.length)}</td><td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.sleeve)}</td></tr>`).join("");
-  return `<div style="font-family:'IBM Plex Mono',monospace;background:${t.bg};color:${t.fg};border:2px solid ${t.fg};padding:24px;max-width:520px"><div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid ${t.fg};padding-bottom:12px;margin-bottom:14px"><div style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:17px;line-height:1.15">${b.brand} ${b.model}<div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.12em;color:${t.ac};margin-top:3px">${b.name.toUpperCase()} · ${b.audience||"UNISEX ADULT"}</div></div><span style="font-size:10px;font-weight:600;letter-spacing:.1em;border:1.5px solid ${t.fg};padding:4px 8px;white-space:nowrap">SIZE CHART</span></div><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>${th("Size")}${th(`Chest (${unitLbl()})`)}${th(`Length (${unitLbl()})`)}${th(`Sleeve (${unitLbl()})`)}</tr></thead><tbody>${rows}</tbody></table><div style="font-size:10px;letter-spacing:.05em;opacity:.65;margin-top:12px;display:flex;justify-content:space-between;gap:1rem"><span>Flat garment measurement · ±0.5${unitLbl()==="cm"?" cm":" in"} tolerance</span><span>chartpress</span></div></div>`;
+  const hasSleeve = b.sizes[0].sleeve != null;
+  const rows = b.sizes.map(r=>`<tr><td style="font-weight:600;padding:7px 10px;border-bottom:1px solid ${border}">${r.s}</td><td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.chest*2)}</td><td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.length)}</td>${hasSleeve?`<td style="padding:7px 10px;border-bottom:1px solid ${border}">${fmt(r.sleeve)}</td>`:""}</tr>`).join("");
+  return `<div style="font-family:'IBM Plex Mono',monospace;background:${t.bg};color:${t.fg};border:2px solid ${t.fg};padding:24px;max-width:520px"><div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid ${t.fg};padding-bottom:12px;margin-bottom:14px"><div style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:17px;line-height:1.15">${b.brand} ${b.model}<div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.12em;color:${t.ac};margin-top:3px">${b.name.toUpperCase()} · ${b.audience||"UNISEX ADULT"}</div></div><span style="font-size:10px;font-weight:600;letter-spacing:.1em;border:1.5px solid ${t.fg};padding:4px 8px;white-space:nowrap">SIZE CHART</span></div><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>${th("Size")}${th(`Chest (${unitLbl()})`)}${th(`Length (${unitLbl()})`)}${hasSleeve?th(`Sleeve (${unitLbl()})`):""}</tr></thead><tbody>${rows}</tbody></table><div style="font-size:10px;letter-spacing:.05em;opacity:.65;margin-top:12px;display:flex;justify-content:space-between;gap:1rem"><span>Flat garment measurement · ±0.5${unitLbl()==="cm"?" cm":" in"} tolerance</span><span>chartpress</span></div></div>`;
 }
 
 function buildSwatches(){

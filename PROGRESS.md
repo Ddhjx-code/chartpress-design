@@ -93,11 +93,11 @@
 | Gildan 64000（Softstyle） | 16→32 × 27→35（XS-5XL），袖长 center back 15.5→25 | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 18500（hoodie） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5 | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 18000（crewneck） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5（同 18500 体型） | ✅ 已核实 | gildan.com 官方规格 |
-| Bella+Canvas 3001 | 18→28 × 28→33，一致 | 高 | bellacanvas.com |
+| Bella+Canvas 3001 | 16.5→32 × 27→35（XS-5XL），官方无袖长列 | ✅ 已核实 | bellacanvas.com 官方规格 |
 | Comfort Colors 1717 | 18.25→29.75 × 26.625→33.5（S-4XL），袖长 center back 16.25→24.625 | ✅ 已核实 | comfortcolors.com 官方规格 |
-| Next Level 3600 | 17.75→27.75（修身），一致 | 高 | nextlevelapparel.com |
+| Next Level 3600 | 17.5→34 × 27→36（XS-6XL），官方无袖长列 | ✅ 已核实 | nextlevelapparel.com 官方规格 |
 | Hanes 5180 | 18→28 × 28→33，一致 | 高 | hanes.com（Beefy-T） |
-| Next Level 6210 | 18→28 × 28→33，吻合 | 中 | nextlevelapparel.com（CVC） |
+| Next Level 6210 | 同 3600 版型（XS-6XL），官方无袖长列 | ✅ 已核实 | nextlevelapparel.com 官方规格 |
 | AS Colour 001 | 18.5→28.5，吻合（注意 AU/UK 版型） | 中 | ascolour.com |
 | Champion S700 | 20→28 × 27→31（5 码，无 3XL） | 中 | champion.com |
 | Russell Athletic 017M | 18→28 × 28→33，吻合 | 中 | russellathletic.com |
@@ -111,6 +111,7 @@
   - ✅ **Gildan 已确认 = "Sleeve center back"（后中起量）**（5000/5000B/5100P/5400B 官方规格均标注）。其余 Gildan 成人款（64000/18500/18000）袖长待按 center back 核对。
 - **青少年款（5000B/18000B）置信度最低**，是核对的最高优先级——青少年尺寸错误最容易导致退货。
 - chest 为平铺胸宽，显示时 ×2 为体围（代码已处理）。
+- **袖长列按需显示**：Bella+Canvas / Next Level 官方规格表不含袖长，渲染器已支持「无袖长数据时自动隐藏袖长列」，只显示已核实的胸宽+衣长（主工具 / SEO 页 / 静态表格 / HTML 片段四处均已实现）。
 - ⚠️ **面料疑点待确认**：用户提供的 Gildan 5000 官方页标注 "5.3 oz/yd² · 50% US Cotton / 50% Polyester"，与传统 5000 Heavy Cotton（6.0 oz · 100% cotton）不符。尺寸数据按官方页采用，但 `data/seo-copy.js` 的面料描述需用户确认后更新。
 - ✅ **18500/18000 品类对调已解决**：官方确认 **18500 = Hoodie（连帽衫）**、**18000 = Crewneck（圆领卫衣）**（我最初标反了，已修正）。两者共用同一 Heavy Blend 身体版型（尺寸完全相同），袖长均为 center back。
 

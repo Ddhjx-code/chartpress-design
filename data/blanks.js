@@ -83,9 +83,11 @@ const BLANKS = {
   bc3001: {
     brand: "Bella+Canvas", model: "3001", name: "Unisex Jersey Tee", slug: "bella-canvas-3001",
     sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 15.75 }, { s: "M", chest: 20, length: 29, sleeve: 16.5 },
-      { s: "L", chest: 22, length: 30, sleeve: 17.25 }, { s: "XL", chest: 24, length: 31, sleeve: 18 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 18.75 }, { s: "3XL", chest: 28, length: 33, sleeve: 19.5 },
+      { s: "XS", chest: 16.5, length: 27 }, { s: "S", chest: 18, length: 28 },
+      { s: "M", chest: 20, length: 29 }, { s: "L", chest: 22, length: 30 },
+      { s: "XL", chest: 24, length: 31 }, { s: "2XL", chest: 26, length: 32 },
+      { s: "3XL", chest: 28, length: 33 }, { s: "4XL", chest: 30, length: 34 },
+      { s: "5XL", chest: 32, length: 35 },
     ],
   },
   cc1717: {
@@ -100,17 +102,21 @@ const BLANKS = {
   nl3600: {
     brand: "Next Level", model: "3600", name: "Premium Fitted Tee", slug: "next-level-3600",
     sizes: [
-      { s: "S", chest: 17.75, length: 27.5, sleeve: 15.5 }, { s: "M", chest: 19.75, length: 28.5, sleeve: 16.25 },
-      { s: "L", chest: 21.75, length: 29.5, sleeve: 17 }, { s: "XL", chest: 23.75, length: 30.5, sleeve: 17.75 },
-      { s: "2XL", chest: 25.75, length: 31.5, sleeve: 18.5 }, { s: "3XL", chest: 27.75, length: 32.5, sleeve: 19.25 },
+      { s: "XS", chest: 17.5, length: 27 }, { s: "S", chest: 19, length: 28 },
+      { s: "M", chest: 20.5, length: 29 }, { s: "L", chest: 22, length: 30 },
+      { s: "XL", chest: 24, length: 31 }, { s: "2XL", chest: 26, length: 32 },
+      { s: "3XL", chest: 28, length: 33 }, { s: "4XL", chest: 30, length: 34 },
+      { s: "5XL", chest: 32, length: 35 }, { s: "6XL", chest: 34, length: 36 },
     ],
   },
   nl6210: {
     brand: "Next Level", model: "6210", name: "CVC Crew", slug: "next-level-6210",
     sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 16 }, { s: "M", chest: 20, length: 29, sleeve: 16.75 },
-      { s: "L", chest: 22, length: 30, sleeve: 17.5 }, { s: "XL", chest: 24, length: 31, sleeve: 18.25 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 19 }, { s: "3XL", chest: 28, length: 33, sleeve: 19.75 },
+      { s: "XS", chest: 17.5, length: 27 }, { s: "S", chest: 19, length: 28 },
+      { s: "M", chest: 20.5, length: 29 }, { s: "L", chest: 22, length: 30 },
+      { s: "XL", chest: 24, length: 31 }, { s: "2XL", chest: 26, length: 32 },
+      { s: "3XL", chest: 28, length: 33 }, { s: "4XL", chest: 30, length: 34 },
+      { s: "5XL", chest: 32, length: 35 }, { s: "6XL", chest: 34, length: 36 },
     ],
   },
   ascolour001: {

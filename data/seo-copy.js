@@ -37,10 +37,10 @@ const SEO_COPY = {
     blurb: "The Comfort Colors 1717 is the garment-dyed heavyweight that defines the vintage, lived-in look. At 6.1 oz/yd² of 100% ring-spun US cotton, each shirt is garment-dyed for rich, muted color and a broken-in feel that gets softer with every wash. Hugely popular for retro and outdoorsy POD brands — its relaxed, slightly oversized fit makes an accurate size chart especially important. Comfort Colors measures sleeve from center back (center neckline, across the shoulder, to the cuff).",
   },
   nl3600: {
-    blurb: "The Next Level 3600 Premium Fitted Tee is a 4.3 oz/yd² (146 GSM) 100% combed ring-spun cotton tee with a trimmer, more athletic cut than a standard unisex blank. It's the choice when you want a clean, fitted look that skews slightly more tailored. Popular for fitness, lifestyle, and design-forward shops.",
+    blurb: "The Next Level 3600 Premium Fitted Tee is a 4.3 oz/yd² 100% combed ring-spun cotton tee with a trimmer, more athletic cut than a standard unisex blank. It's the choice when you want a clean, fitted look that skews slightly more tailored. Popular for fitness, lifestyle, and design-forward shops. It shares the exact same cut as the 6210 CVC — only the fabric differs. The official spec lists chest and body length (measured flat from the high point of shoulder).",
   },
   nl6210: {
-    blurb: "The Next Level 6210 CVC Crew blends 60% combed ring-spun cotton with 40% polyester (CVC = chief value cotton) for a soft hand and excellent shape retention. The cotton-rich blend resists shrinkage and keeps prints crisp over many washes — a reliable mid-weight crew for shops that want durability without a heavy feel.",
+    blurb: "The Next Level 6210 CVC Crew blends 60% combed ring-spun cotton with 40% polyester (CVC = chief value cotton) for a soft hand and excellent shape retention. The cotton-rich blend resists shrinkage and keeps prints crisp over many washes — a reliable mid-weight crew for shops that want durability without a heavy feel. It shares the exact same cut as the 3600 — only the fabric differs. The official spec lists chest and body length (measured flat from the high point of shoulder).",
   },
   ascolour001: {
     blurb: "The AS Colour 001 Staple Tee is the Australian brand's signature blank — a 5.0 oz (170 GSM) 100% combed cotton tee with a clean, regular fit and a smooth print surface. A favorite for streetwear and merch in AU, UK, and NZ markets. If you sell outside North America, this is one of the most-requested blanks your buyers will recognize.",
