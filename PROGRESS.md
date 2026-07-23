@@ -16,7 +16,7 @@
 
 | 里程碑 | 状态 | 说明 |
 |--------|------|------|
-| **M1 单页工具** | ✅ 已完成 | 10 底衫 + 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
+| **M1 单页工具** | ✅ 已完成 | 11 底衫（10 成人 + 1 青少年）+ 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
 | **M2 Programmatic SEO** | ⏳ 待开始 | 每型号独立 URL 页 + 构建脚本 + sitemap |
 | **M3 上线 + 观察** | ⏳ 待开始 | 部署 + 提交收录 + 埋点 |
 | **M4 验证后扩展** | ⏳ 待定 | 扩底衫库 / 自定义数据 / PDF / Logo |
@@ -25,10 +25,9 @@
 
 ## M1 已完成清单
 
-- [x] 10 个底衫数据（含 `slug` 字段，用于 SEO URL）：
-  - Gildan 5000 / Gildan 64000 / Gildan 18500 / Gildan 18000
-  - Bella+Canvas 3001 / Comfort Colors 1717 / Next Level 3600 / AS Colour 001
-  - Champion S700 / Russell Athletic 017M
+- [x] 11 个底衫数据（含 `slug` + `audience` 字段）：
+  - 成人：Gildan 5000 / 64000 / 18500 / 18000、Bella+Canvas 3001、Comfort Colors 1717、Next Level 3600、AS Colour 001、Champion S700、Russell Athletic 017M
+  - 青少年：Gildan 5000B（Youth Heavy Cotton）
 - [x] 5 个主题（Ink / Paper / Kraft / Mint / Blush）
 - [x] IN / CM 单位切换（内部恒用英寸，渲染层换算）
 - [x] **真实 PNG 导出**：html2canvas CDN，桌面 3x / 移动 2x，`document.fonts.ready` 保证字体
@@ -42,36 +41,52 @@
 ## 待办（按优先级）
 
 ### 🔴 高优先级：人工验证 M1（本机浏览器已打开过，需在另一台机器复验）
-- [ ] 切换 8 个底衫 → hero + demo 预览同步更新
+- [ ] 切换 11 个底衫 → hero + demo 预览同步更新（含青少年 5000B 显示 "YOUTH" 标签）
 - [ ] 切 IN/CM、切 5 主题 → 数值/配色正确
 - [ ] 点 `Press PNG` → 真实下载 PNG，文件名 `{slug}-size-chart-{unit}.png`
 - [ ] 点 `Copy HTML` → 粘贴到空白页，表格正常、不依赖外部 CSS
 - [ ] 375px 移动端布局不溢出
 
-### 🟡 中优先级：底衫数据调研与核对（**部分完成**）
+### ✅ 底衫数据调研（Google Trends 已完成）
 
-**已完成的调研（本机）**：
-- [x] G2 竞品扫描 → **印证竞品空白**：G2 上无独立跨平台尺码表工具（只有 Chart.js/Highcharts 等图表库 + 一个 Magento 插件），与设计文档判断一致
-- [x] 基于行业知识评估底衫库 → 发现 2 个关键缺口并已补上：
-  - ✅ 新增 `Gildan 64000`（Softstyle Tee）——最热门 POD T 恤之一
-  - ✅ 新增 `Gildan 18000`（Heavy Blend Hoodie）——#1 POD 卫衣
+**G2 竞品扫描** → 印证竞品空白：G2 上无独立跨平台尺码表工具（只有 Chart.js/Highcharts 等图表库 + 一个 Magento 插件）。
 
-**调研工具受阻情况（需在另一台机器重试）**：
-- ❌ Google Trends（浏览器端点）：Chrome 会话崩溃无法自恢复，需**重启 MCP 服务器/会话**
-- ❌ Reddit MCP：未配置 `REDDIT_CLIENT_ID/SECRET`（见下方 MCP 配置章节）
-- ❌ AlternativeTo：403 被反爬封锁
-- ⚠️ Hacker News：返回空结果
+**Google Trends 型号热度排名**（US，2026 春季峰值，相对值）：
 
-**待补做（配好工具后）**：
-- [ ] Google Trends 对比各型号热度，量化确认 64000/18000 的优先级
-- [ ] Reddit（r/printondemand, r/EtsySellers）验证卖家实际常用底衫
-- [ ] 评估二级缺口是否纳入：`Hanes`（整个品牌缺失）、`Next Level 6210`（CVC）、`Lane Seven LS16008`（精品空白衫）
+| 排名 | 底衫 | 春季峰值 | 结论 |
+|------|------|---------|------|
+| 1 | Gildan 5000 | 100 | 第一梯队，默认底衫选对了 |
+| 1 | Gildan 18500（crewneck） | 100 | 第一梯队，黑马 |
+| 1 | Next Level 3600 | 100 | 第一梯队 |
+| 4 | Comfort Colors 1717 | 85 | 准第一梯队（潮流 garment-dyed） |
+| 5 | Gildan 64000（Softstyle） | 34 | 第二梯队，新增正确 |
+| 5 | Gildan 18000（hoodie） | 34 | 第二梯队，新增正确 |
+| 7 | Bella+Canvas 3001 | 14 | 搜索量偏低（卖家凭口碑知晓），保留 |
+| 8 | Champion S700 | 9 | 小众，保留 |
+| 9 | AS Colour 001 | 0（US） | 仅 AU/UK 有量，不驱动美国 SEO，保留供英语市场 |
+
+> 注：两批对比各自归一化（批内最高=100），跨批数值仅供量级参考，批内排名可靠。
+
+**关键发现 1 — 强季节性**：需求在 3-5 月暴涨（峰值约 4/12），淡季（7-9 月）低 5-10 倍。**上线时机很重要，春季是黄金窗口。**
+
+**关键发现 2 — 最大缺口：青少年/儿童**（"gildan size chart" 关联查询）：
+- `youth gildan size chart` = 关联搜索 #1（热度 100）
+- `gildan kids size chart` = rising +100%（暴涨）
+- 原库全是成人款，**0 个青少年底衫** → 已补 `Gildan 5000B`（Youth Heavy Cotton），直接吃 "youth gildan" + "gildan 5000" 双重需求
+- 后续可扩：Gildan 18000B（youth hoodie）、Bella+Canvas 3001 youth
+
+**其他关联查询验证**：`gildan softstyle size chart`(14)→验证 64000 ✅；`gildan crewneck size chart`(11)→验证 18500 ✅；`gildan hoodie size chart`(34)→验证 18000 ✅。
+
+**剩余可选调研**：
+- [ ] Reddit（r/printondemand, r/EtsySellers）验证卖家实际常用底衫（需配置凭证）
+- [ ] 评估二级缺口：`Hanes`（整个品牌缺失）、`Next Level 6210`（CVC）、`Lane Seven LS16008`（精品空白衫）
 
 ### 🔴 高优先级：尺寸数据官方核对（**上线前必须完成**）
 
-> ⚠️ **产品核心价值 = 数据准确**。当前 10 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
+> ⚠️ **产品核心价值 = 数据准确**。当前 11 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
 
 - [ ] Gildan 5000 / 64000 / 18500 / 18000 → 对照 Gildan 官网规格 PDF（gildan.com）
+- [ ] **Gildan 5000B（youth）→ 对照 Gildan 青少年规格表，重点核对（青少年尺寸最易出错）**
 - [ ] Bella+Canvas 3001 → 对照 bellacanvas.com 规格表
 - [ ] Comfort Colors 1717 → 对照 comfortcolors.com
 - [ ] Next Level 3600 → 对照 nextlevelapparel.com
