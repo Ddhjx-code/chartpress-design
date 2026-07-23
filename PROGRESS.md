@@ -92,7 +92,7 @@
 | Gildan 5000 | 18→32 × 28→35（S-5XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 64000 | 同 5000 版型，一致 | 高 | gildan.com（Softstyle） |
 | Gildan 18500（hoodie） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5 | ✅ 已核实 | gildan.com 官方规格 |
-| Gildan 18000 | 同 18500 体型，一致 | 高 | gildan.com（Hoodie） |
+| Gildan 18000（crewneck） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5（同 18500 体型） | ✅ 已核实 | gildan.com 官方规格 |
 | Bella+Canvas 3001 | 18→28 × 28→33，一致 | 高 | bellacanvas.com |
 | Comfort Colors 1717 | 18.25→28.25 × 28.5→33.5，与官方精确一致 | 高 | comfortcolors.com |
 | Next Level 3600 | 17.75→27.75（修身），一致 | 高 | nextlevelapparel.com |
@@ -112,7 +112,7 @@
 - **青少年款（5000B/18000B）置信度最低**，是核对的最高优先级——青少年尺寸错误最容易导致退货。
 - chest 为平铺胸宽，显示时 ×2 为体围（代码已处理）。
 - ⚠️ **面料疑点待确认**：用户提供的 Gildan 5000 官方页标注 "5.3 oz/yd² · 50% US Cotton / 50% Polyester"，与传统 5000 Heavy Cotton（6.0 oz · 100% cotton）不符。尺寸数据按官方页采用，但 `data/seo-copy.js` 的面料描述需用户确认后更新。
-- ⚠️ **18500/18000 品类对调**：官方确认 **18500 = Hoodie（连帽衫）**，而我最初标成了 Crewneck。结合 18000B（青少年）= Crewneck，推断 **18000（成人）应为 Crewneck（圆领）**，但我最初标成了 Hoodie。**18000 的品类 + 尺寸 + 袖长仍待官方规格确认**。
+- ✅ **18500/18000 品类对调已解决**：官方确认 **18500 = Hoodie（连帽衫）**、**18000 = Crewneck（圆领卫衣）**（我最初标反了，已修正）。两者共用同一 Heavy Blend 身体版型（尺寸完全相同），袖长均为 center back。
 
 **待办**：
 - [ ] 按上表"官方来源"列逐一手动复核 chest/length/sleeve

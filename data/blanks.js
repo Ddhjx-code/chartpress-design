@@ -61,11 +61,13 @@ const BLANKS = {
     ],
   },
   gildan18000: {
-    brand: "Gildan", model: "18000", name: "Heavy Blend Hoodie", slug: "gildan-18000",
+    brand: "Gildan", model: "18000", name: "Heavy Blend Crewneck", slug: "gildan-18000",
     sizes: [
-      { s: "S", chest: 20, length: 27, sleeve: 23.5 }, { s: "M", chest: 22, length: 28, sleeve: 24 },
-      { s: "L", chest: 24, length: 29, sleeve: 24.5 }, { s: "XL", chest: 26, length: 30, sleeve: 25 },
-      { s: "2XL", chest: 28, length: 31, sleeve: 25.5 }, { s: "3XL", chest: 30, length: 32, sleeve: 26 },
+      { s: "XS", chest: 18, length: 26, sleeve: 32.5 }, { s: "S", chest: 20, length: 27, sleeve: 33.5 },
+      { s: "M", chest: 22, length: 28, sleeve: 34.5 }, { s: "L", chest: 24, length: 29, sleeve: 35.5 },
+      { s: "XL", chest: 26, length: 30, sleeve: 36.5 }, { s: "2XL", chest: 28, length: 31, sleeve: 37.5 },
+      { s: "3XL", chest: 30, length: 32, sleeve: 38.5 }, { s: "4XL", chest: 32, length: 33, sleeve: 39.5 },
+      { s: "5XL", chest: 34, length: 34, sleeve: 40.5 },
     ],
   },
   gildan18000b: {
