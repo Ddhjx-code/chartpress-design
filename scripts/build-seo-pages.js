@@ -23,7 +23,7 @@ const { BLANKS, THEMES } = require(path.join(ROOT, "data", "blanks.js"));
 const { SEO_COPY } = require(path.join(ROOT, "data", "seo-copy.js"));
 const template = fs.readFileSync(path.join(ROOT, "templates", "seo-page.html"), "utf8");
 
-const fmtIn = v => (v % 1 ? v.toFixed(2).replace(/0$/, "") : String(v));
+const fmtIn = v => (v % 1 ? parseFloat(v.toFixed(3)).toString() : String(v));
 const hexToRgba = (hex, a) => {
   const n = parseInt(hex.slice(1), 16);
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;

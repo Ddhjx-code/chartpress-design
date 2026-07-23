@@ -12,9 +12,10 @@ const BLANKS = {
   gildan5000: {
     brand: "Gildan", model: "5000", name: "Heavy Cotton Tee", slug: "gildan-5000",
     sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 15.5 }, { s: "M", chest: 20, length: 29, sleeve: 16.5 },
-      { s: "L", chest: 22, length: 30, sleeve: 17.5 }, { s: "XL", chest: 24, length: 31, sleeve: 18.5 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 19.5 }, { s: "3XL", chest: 28, length: 33, sleeve: 20.5 },
+      { s: "S", chest: 18, length: 28, sleeve: 15.125 }, { s: "M", chest: 20, length: 29, sleeve: 16.5 },
+      { s: "L", chest: 22, length: 30, sleeve: 18 }, { s: "XL", chest: 24, length: 31, sleeve: 19.5 },
+      { s: "2XL", chest: 26, length: 32, sleeve: 21 }, { s: "3XL", chest: 28, length: 33, sleeve: 22.375 },
+      { s: "4XL", chest: 30, length: 34, sleeve: 23.675 }, { s: "5XL", chest: 32, length: 35, sleeve: 25 },
     ],
   },
   gildan5000b: {
