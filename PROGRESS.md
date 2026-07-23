@@ -104,7 +104,7 @@
 | Gildan 5000B（youth） | 16→20 × 20.5→26.5，含 XS，袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 5100P（toddler） | 11→15 × 15→19（2T-6T），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 5400B（youth LS） | 16→20 × 20.5→26.5（XS-XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
-| **Gildan 18000B（youth）** | 16→22 × 21→27，量级正确 | **低** | gildan.com 青少年规格表 |
+| Gildan 18000B（youth crewneck） | 16→20 × 19.75→25.5（XS-XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 
 **关键注意事项**：
 - **袖长（sleeve）口径最不统一**：不同来源分别从「肩缝起」或「后中起」测量，差异可达数英寸。上线前必须确认每个底衫的袖长测量基准并统一。

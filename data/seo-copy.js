@@ -28,7 +28,7 @@ const SEO_COPY = {
     blurb: "The Gildan 18000 Heavy Blend Hoodie is the single most popular print-on-demand hoodie. Built on the same 8.0 oz/yd² 50/50 cotton-poly fleece as the 18500 crewneck, it adds a double-lined hood and kangaroo pouch pocket. If you sell hoodies at all, this is almost certainly the blank your supplier prints on — a dedicated size chart for it is essential.",
   },
   gildan18000b: {
-    blurb: "The Gildan 18000B is the youth Heavy Blend Hoodie — the kids' version of the best-selling 18000. Same warm 50/50 cotton-poly fleece, sized for younger wearers. Perfect for matching family or school-group orders. A separate youth hoodie size chart keeps parents from guessing and cuts 'doesn't fit' returns on kids' orders.",
+    blurb: "The Gildan 18000B is the youth Heavy Blend Crewneck — a kids' sweatshirt in Gildan's trusted 8.0 oz/yd² 50/50 cotton-poly Heavy Blend fleece. Warm, durable, and pill-resistant, it's a go-to for family and school-group orders. A dedicated youth crewneck size chart keeps parents from guessing and cuts 'doesn't fit' returns on kids' orders. Gildan measures sleeve from center back (center neckline, across the shoulder, to the cuff).",
   },
   bc3001: {
     blurb: "The Bella+Canvas 3001 Unisex Jersey Tee is the premium retail-fit favorite. At 4.2 oz/yd² (142 GSM) of 100% combed and ring-spun cotton, it's noticeably softer and lighter than a Gildan 5000, with a modern, slightly tailored silhouette that buyers associate with higher-end merch. The default choice for creators who want their apparel to feel like a retail brand, not a promo tee.",

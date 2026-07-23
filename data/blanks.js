@@ -67,10 +67,11 @@ const BLANKS = {
     ],
   },
   gildan18000b: {
-    brand: "Gildan", model: "18000B", name: "Youth Heavy Blend Hoodie", slug: "gildan-18000b-youth", audience: "YOUTH",
+    brand: "Gildan", model: "18000B", name: "Youth Heavy Blend Crewneck", slug: "gildan-18000b-youth", audience: "YOUTH",
     sizes: [
-      { s: "S", chest: 16, length: 21, sleeve: 19 }, { s: "M", chest: 18, length: 23, sleeve: 20.5 },
-      { s: "L", chest: 20, length: 25, sleeve: 22 }, { s: "XL", chest: 22, length: 27, sleeve: 23.5 },
+      { s: "XS", chest: 16, length: 19.75, sleeve: 23.5 }, { s: "S", chest: 17, length: 21.25, sleeve: 26.5 },
+      { s: "M", chest: 18, length: 22.5, sleeve: 27.75 }, { s: "L", chest: 19, length: 24, sleeve: 30.25 },
+      { s: "XL", chest: 20, length: 25.5, sleeve: 33 },
     ],
   },
   bc3001: {
