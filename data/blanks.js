@@ -91,9 +91,10 @@ const BLANKS = {
   cc1717: {
     brand: "Comfort Colors", model: "1717", name: "Garment-Dyed Heavyweight", slug: "comfort-colors-1717",
     sizes: [
-      { s: "S", chest: 18.25, length: 28.5, sleeve: 15.5 }, { s: "M", chest: 20.25, length: 29.5, sleeve: 16.25 },
-      { s: "L", chest: 22.25, length: 30.5, sleeve: 17 }, { s: "XL", chest: 24.25, length: 31.5, sleeve: 17.75 },
-      { s: "2XL", chest: 26.25, length: 32.5, sleeve: 18.5 }, { s: "3XL", chest: 28.25, length: 33.5, sleeve: 19.25 },
+      { s: "S", chest: 18.25, length: 26.625, sleeve: 16.25 }, { s: "M", chest: 20.25, length: 28, sleeve: 17.75 },
+      { s: "L", chest: 22, length: 29.375, sleeve: 19 }, { s: "XL", chest: 24, length: 30.75, sleeve: 20.5 },
+      { s: "2XL", chest: 26, length: 31.625, sleeve: 21.75 }, { s: "3XL", chest: 27.75, length: 32.5, sleeve: 23.25 },
+      { s: "4XL", chest: 29.75, length: 33.5, sleeve: 24.625 },
     ],
   },
   nl3600: {

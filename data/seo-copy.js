@@ -34,7 +34,7 @@ const SEO_COPY = {
     blurb: "The Bella+Canvas 3001 Unisex Jersey Tee is the premium retail-fit favorite. At 4.2 oz/yd² (142 GSM) of 100% combed and ring-spun cotton, it's noticeably softer and lighter than a Gildan 5000, with a modern, slightly tailored silhouette that buyers associate with higher-end merch. The default choice for creators who want their apparel to feel like a retail brand, not a promo tee.",
   },
   cc1717: {
-    blurb: "The Comfort Colors 1717 is the garment-dyed heavyweight that defines the vintage, lived-in look. At 6.1 oz/yd² (207 GSM) of ring-spun cotton, each shirt is garment-dyed for rich, muted color and a broken-in feel that gets softer with every wash. Hugely popular for retro and outdoorsy POD brands — its relaxed, slightly oversized fit makes an accurate size chart especially important.",
+    blurb: "The Comfort Colors 1717 is the garment-dyed heavyweight that defines the vintage, lived-in look. At 6.1 oz/yd² of 100% ring-spun US cotton, each shirt is garment-dyed for rich, muted color and a broken-in feel that gets softer with every wash. Hugely popular for retro and outdoorsy POD brands — its relaxed, slightly oversized fit makes an accurate size chart especially important. Comfort Colors measures sleeve from center back (center neckline, across the shoulder, to the cuff).",
   },
   nl3600: {
     blurb: "The Next Level 3600 Premium Fitted Tee is a 4.3 oz/yd² (146 GSM) 100% combed ring-spun cotton tee with a trimmer, more athletic cut than a standard unisex blank. It's the choice when you want a clean, fitted look that skews slightly more tailored. Popular for fitness, lifestyle, and design-forward shops.",
