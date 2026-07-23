@@ -16,7 +16,7 @@
 
 | 里程碑 | 状态 | 说明 |
 |--------|------|------|
-| **M1 单页工具** | ✅ 已完成 | 8 底衫 + 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
+| **M1 单页工具** | ✅ 已完成 | 10 底衫 + 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
 | **M2 Programmatic SEO** | ⏳ 待开始 | 每型号独立 URL 页 + 构建脚本 + sitemap |
 | **M3 上线 + 观察** | ⏳ 待开始 | 部署 + 提交收录 + 埋点 |
 | **M4 验证后扩展** | ⏳ 待定 | 扩底衫库 / 自定义数据 / PDF / Logo |
@@ -25,9 +25,10 @@
 
 ## M1 已完成清单
 
-- [x] 8 个底衫数据（含 `slug` 字段，用于 SEO URL）：
-  - Gildan 5000 / Gildan 18500 / Bella+Canvas 3001 / Comfort Colors 1717
-  - Next Level 3600 / AS Colour 001 / Champion S700 / Russell Athletic 017M
+- [x] 10 个底衫数据（含 `slug` 字段，用于 SEO URL）：
+  - Gildan 5000 / Gildan 64000 / Gildan 18500 / Gildan 18000
+  - Bella+Canvas 3001 / Comfort Colors 1717 / Next Level 3600 / AS Colour 001
+  - Champion S700 / Russell Athletic 017M
 - [x] 5 个主题（Ink / Paper / Kraft / Mint / Blush）
 - [x] IN / CM 单位切换（内部恒用英寸，渲染层换算）
 - [x] **真实 PNG 导出**：html2canvas CDN，桌面 3x / 移动 2x，`document.fonts.ready` 保证字体
@@ -47,14 +48,38 @@
 - [ ] 点 `Copy HTML` → 粘贴到空白页，表格正常、不依赖外部 CSS
 - [ ] 375px 移动端布局不溢出
 
-### 🟡 中优先级：底衫数据调研补全（**重要，尚未完成**）
-> 当前 8 个底衫基于设计文档的既有调研选定，但**未亲自验证当前市场热度**。
-> 本机网络环境无法访问 Google Trends / Reddit MCP（超时/未配置凭据），需在另一台机器补做：
-- [ ] 用 Google Trends 对比各型号搜索热度，确认是否漏了热门型号
-  - **重点怀疑遗漏**：`Gildan 64000`（Softstyle，极热门）、`Gildan 18000`（Heavy Blend Hoodie）
-- [ ] 用 Reddit（r/printondemand, r/EtsySellers）验证卖家实际常用底衫
-- [ ] 核对每个底衫的官方 flat measurements 是否准确（当前为近似值，需对照官网）
-- [ ] 决定是否扩充底衫库（MVP 目标 8-10 个）
+### 🟡 中优先级：底衫数据调研与核对（**部分完成**）
+
+**已完成的调研（本机）**：
+- [x] G2 竞品扫描 → **印证竞品空白**：G2 上无独立跨平台尺码表工具（只有 Chart.js/Highcharts 等图表库 + 一个 Magento 插件），与设计文档判断一致
+- [x] 基于行业知识评估底衫库 → 发现 2 个关键缺口并已补上：
+  - ✅ 新增 `Gildan 64000`（Softstyle Tee）——最热门 POD T 恤之一
+  - ✅ 新增 `Gildan 18000`（Heavy Blend Hoodie）——#1 POD 卫衣
+
+**调研工具受阻情况（需在另一台机器重试）**：
+- ❌ Google Trends（浏览器端点）：Chrome 会话崩溃无法自恢复，需**重启 MCP 服务器/会话**
+- ❌ Reddit MCP：未配置 `REDDIT_CLIENT_ID/SECRET`（见下方 MCP 配置章节）
+- ❌ AlternativeTo：403 被反爬封锁
+- ⚠️ Hacker News：返回空结果
+
+**待补做（配好工具后）**：
+- [ ] Google Trends 对比各型号热度，量化确认 64000/18000 的优先级
+- [ ] Reddit（r/printondemand, r/EtsySellers）验证卖家实际常用底衫
+- [ ] 评估二级缺口是否纳入：`Hanes`（整个品牌缺失）、`Next Level 6210`（CVC）、`Lane Seven LS16008`（精品空白衫）
+
+### 🔴 高优先级：尺寸数据官方核对（**上线前必须完成**）
+
+> ⚠️ **产品核心价值 = 数据准确**。当前 10 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
+
+- [ ] Gildan 5000 / 64000 / 18500 / 18000 → 对照 Gildan 官网规格 PDF（gildan.com）
+- [ ] Bella+Canvas 3001 → 对照 bellacanvas.com 规格表
+- [ ] Comfort Colors 1717 → 对照 comfortcolors.com
+- [ ] Next Level 3600 → 对照 nextlevelapparel.com
+- [ ] AS Colour 001 → 对照 ascolour.com（注意 AU/UK 版型差异）
+- [ ] Champion S700 → 对照 champion.com（仅 5 个尺码，无 3XL，需确认）
+- [ ] Russell Athletic 017M → 对照 russellathletic.com
+- [ ] 核对维度：chest（胸宽×2=体围）、length（衣长）、sleeve（袖长，确认是肩缝起还是后中起）
+- [ ] 每个底衫标注数据来源 + 核对日期（放进 `data/blanks.js` 注释）
 
 ### 🟢 M2：Programmatic SEO 多页
 - [ ] `data/blanks.js`：抽出共享数据（与主页面共用）
