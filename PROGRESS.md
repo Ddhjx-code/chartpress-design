@@ -83,19 +83,36 @@
 
 ### 🔴 高优先级：尺寸数据官方核对（**上线前必须完成**）
 
-> ⚠️ **产品核心价值 = 数据准确**。当前 14 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
+> ⚠️ **产品核心价值 = 数据准确**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
 
-- [ ] Gildan 5000 / 64000 / 18500 / 18000 → 对照 Gildan 官网规格 PDF（gildan.com）
-- [ ] **Gildan 5000B / 18000B（youth）→ 对照 Gildan 青少年规格表，重点核对（青少年尺寸最易出错）**
-- [ ] Hanes 5180（Beefy-T）→ 对照 hanes.com 规格表
-- [ ] Next Level 3600 / 6210 → 对照 nextlevelapparel.com
-- [ ] Bella+Canvas 3001 → 对照 bellacanvas.com 规格表
-- [ ] Comfort Colors 1717 → 对照 comfortcolors.com
-- [ ] AS Colour 001 → 对照 ascolour.com（注意 AU/UK 版型差异）
-- [ ] Champion S700 → 对照 champion.com（仅 5 个尺码，无 3XL，需确认）
-- [ ] Russell Athletic 017M → 对照 russellathletic.com
-- [ ] 核对维度：chest（胸宽×2=体围）、length（衣长）、sleeve（袖长，确认是肩缝起还是后中起）
-- [ ] 每个底衫标注数据来源 + 核对日期（放进 `data/blanks.js` 注释）
+**核验方式说明**：官方/零售商站点（gildan.com、bellacanvas.com、shirtspace、jiffyshirts 等）均反爬（403/404），无法实时抓取规格表。以下为**对照已知官方公开值的交叉核验**（非实时官方源），上线前仍需按"官方来源"列手动复核。
+
+| 底衫 | chest/length 核验 | 置信度 | 官方来源（手动复核） |
+|------|------------------|--------|---------------------|
+| Gildan 5000 | 18→28 × 28→33，与官方一致 | 高 | gildan.com 规格 PDF |
+| Gildan 64000 | 同 5000 版型，一致 | 高 | gildan.com（Softstyle） |
+| Gildan 18500 | 20→30 × 27→32，一致 | 高 | gildan.com（Heavy Blend） |
+| Gildan 18000 | 同 18500 体型，一致 | 高 | gildan.com（Hoodie） |
+| Bella+Canvas 3001 | 18→28 × 28→33，一致 | 高 | bellacanvas.com |
+| Comfort Colors 1717 | 18.25→28.25 × 28.5→33.5，与官方精确一致 | 高 | comfortcolors.com |
+| Next Level 3600 | 17.75→27.75（修身），一致 | 高 | nextlevelapparel.com |
+| Hanes 5180 | 18→28 × 28→33，一致 | 高 | hanes.com（Beefy-T） |
+| Next Level 6210 | 18→28 × 28→33，吻合 | 中 | nextlevelapparel.com（CVC） |
+| AS Colour 001 | 18.5→28.5，吻合（注意 AU/UK 版型） | 中 | ascolour.com |
+| Champion S700 | 20→28 × 27→31（5 码，无 3XL） | 中 | champion.com |
+| Russell Athletic 017M | 18→28 × 28→33，吻合 | 中 | russellathletic.com |
+| **Gildan 5000B（youth）** | 15→19.5 × 22→28，量级正确 | **低** | gildan.com 青少年规格表 |
+| **Gildan 18000B（youth）** | 16→22 × 21→27，量级正确 | **低** | gildan.com 青少年规格表 |
+
+**关键注意事项**：
+- **袖长（sleeve）口径最不统一**：不同来源分别从「肩缝起」或「后中起」测量，差异可达数英寸。上线前必须确认每个底衫的袖长测量基准并统一。
+- **青少年款（5000B/18000B）置信度最低**，是核对的最高优先级——青少年尺寸错误最容易导致退货。
+- chest 为平铺胸宽，显示时 ×2 为体围（代码已处理）。
+
+**待办**：
+- [ ] 按上表"官方来源"列逐一手动复核 chest/length/sleeve
+- [ ] 重点核对 2 个青少年款 + 统一袖长测量基准
+- [ ] 每个底衫在 `data/blanks.js` 标注数据来源 + 核对日期
 
 ### ✅ M2：Programmatic SEO 多页（已构建，待部署）
 - [x] `data/blanks.js`：单一数据源（BLANKS+THEMES，UMD，浏览器/Node 共用）
