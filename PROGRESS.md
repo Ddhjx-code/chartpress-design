@@ -90,7 +90,7 @@
 | 底衫 | chest/length 核验 | 置信度 | 官方来源（手动复核） |
 |------|------------------|--------|---------------------|
 | Gildan 5000 | 18→32 × 28→35（S-5XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
-| Gildan 64000 | 同 5000 版型，一致 | 高 | gildan.com（Softstyle） |
+| Gildan 64000（Softstyle） | 16→32 × 27→35（XS-5XL），袖长 center back 15.5→25 | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 18500（hoodie） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5 | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 18000（crewneck） | 18→34 × 26→34（XS-5XL），袖长 center back 32.5→40.5（同 18500 体型） | ✅ 已核实 | gildan.com 官方规格 |
 | Bella+Canvas 3001 | 18→28 × 28→33，一致 | 高 | bellacanvas.com |

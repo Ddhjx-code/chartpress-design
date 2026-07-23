@@ -45,9 +45,11 @@ const BLANKS = {
   gildan64000: {
     brand: "Gildan", model: "64000", name: "Softstyle Tee", slug: "gildan-64000",
     sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 15.75 }, { s: "M", chest: 20, length: 29, sleeve: 16.5 },
-      { s: "L", chest: 22, length: 30, sleeve: 17.25 }, { s: "XL", chest: 24, length: 31, sleeve: 18 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 18.75 }, { s: "3XL", chest: 28, length: 33, sleeve: 19.5 },
+      { s: "XS", chest: 16, length: 27, sleeve: 15.5 }, { s: "S", chest: 18, length: 28, sleeve: 16.625 },
+      { s: "M", chest: 20, length: 29, sleeve: 17.75 }, { s: "L", chest: 22, length: 30, sleeve: 19 },
+      { s: "XL", chest: 24, length: 31, sleeve: 20.25 }, { s: "2XL", chest: 26, length: 32, sleeve: 21.5 },
+      { s: "3XL", chest: 28, length: 33, sleeve: 22.625 }, { s: "4XL", chest: 30, length: 34, sleeve: 23.75 },
+      { s: "5XL", chest: 32, length: 35, sleeve: 25 },
     ],
   },
   gildan18500: {
