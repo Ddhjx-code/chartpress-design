@@ -20,8 +20,9 @@ const BLANKS = {
   gildan5000b: {
     brand: "Gildan", model: "5000B", name: "Youth Heavy Cotton Tee", slug: "gildan-5000b-youth", audience: "YOUTH",
     sizes: [
-      { s: "S", chest: 15, length: 22, sleeve: 12.5 }, { s: "M", chest: 16.5, length: 24, sleeve: 13.5 },
-      { s: "L", chest: 18, length: 26, sleeve: 14.5 }, { s: "XL", chest: 19.5, length: 28, sleeve: 15.5 },
+      { s: "XS", chest: 16, length: 20.5, sleeve: 13.25 }, { s: "S", chest: 17, length: 22, sleeve: 14.25 },
+      { s: "M", chest: 18, length: 23.5, sleeve: 15.25 }, { s: "L", chest: 19, length: 25, sleeve: 16.25 },
+      { s: "XL", chest: 20, length: 26.5, sleeve: 17.25 },
     ],
   },
   gildan5100p: {

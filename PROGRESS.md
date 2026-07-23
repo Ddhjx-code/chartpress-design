@@ -101,7 +101,9 @@
 | AS Colour 001 | 18.5→28.5，吻合（注意 AU/UK 版型） | 中 | ascolour.com |
 | Champion S700 | 20→28 × 27→31（5 码，无 3XL） | 中 | champion.com |
 | Russell Athletic 017M | 18→28 × 28→33，吻合 | 中 | russellathletic.com |
-| **Gildan 5000B（youth）** | 15→19.5 × 22→28，量级正确 | **低** | gildan.com 青少年规格表 |
+| Gildan 5000B（youth） | 16→20 × 20.5→26.5，含 XS，袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
+| Gildan 5100P（toddler） | 11→15 × 15→19（2T-6T），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
+| Gildan 5400B（youth LS） | 16→20 × 20.5→26.5（XS-XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | **Gildan 18000B（youth）** | 16→22 × 21→27，量级正确 | **低** | gildan.com 青少年规格表 |
 
 **关键注意事项**：
