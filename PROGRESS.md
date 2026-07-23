@@ -16,7 +16,7 @@
 
 | 里程碑 | 状态 | 说明 |
 |--------|------|------|
-| **M1 单页工具** | ✅ 已完成 | 11 底衫（10 成人 + 1 青少年）+ 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
+| **M1 单页工具** | ✅ 已完成 | 14 底衫（12 成人 + 2 青少年）+ 5 主题 + IN/CM + 真实 PNG 导出 + 真实 HTML 复制 |
 | **M2 Programmatic SEO** | ⏳ 待开始 | 每型号独立 URL 页 + 构建脚本 + sitemap |
 | **M3 上线 + 观察** | ⏳ 待开始 | 部署 + 提交收录 + 埋点 |
 | **M4 验证后扩展** | ⏳ 待定 | 扩底衫库 / 自定义数据 / PDF / Logo |
@@ -25,9 +25,9 @@
 
 ## M1 已完成清单
 
-- [x] 11 个底衫数据（含 `slug` + `audience` 字段）：
-  - 成人：Gildan 5000 / 64000 / 18500 / 18000、Bella+Canvas 3001、Comfort Colors 1717、Next Level 3600、AS Colour 001、Champion S700、Russell Athletic 017M
-  - 青少年：Gildan 5000B（Youth Heavy Cotton）
+- [x] 14 个底衫数据（含 `slug` + `audience` 字段）：
+  - 成人：Gildan 5000 / 64000 / 18500 / 18000、Bella+Canvas 3001、Comfort Colors 1717、Next Level 3600 / 6210、AS Colour 001、Champion S700、Hanes 5180、Russell Athletic 017M
+  - 青少年：Gildan 5000B（Youth Heavy Cotton）、Gildan 18000B（Youth Hoodie）
 - [x] 5 个主题（Ink / Paper / Kraft / Mint / Blush）
 - [x] IN / CM 单位切换（内部恒用英寸，渲染层换算）
 - [x] **真实 PNG 导出**：html2canvas CDN，桌面 3x / 移动 2x，`document.fonts.ready` 保证字体
@@ -41,7 +41,7 @@
 ## 待办（按优先级）
 
 ### 🔴 高优先级：人工验证 M1（本机浏览器已打开过，需在另一台机器复验）
-- [ ] 切换 11 个底衫 → hero + demo 预览同步更新（含青少年 5000B 显示 "YOUTH" 标签）
+- [ ] 切换 14 个底衫 → hero + demo 预览同步更新（含青少年 5000B/18000B 显示 "YOUTH" 标签）
 - [ ] 切 IN/CM、切 5 主题 → 数值/配色正确
 - [ ] 点 `Press PNG` → 真实下载 PNG，文件名 `{slug}-size-chart-{unit}.png`
 - [ ] 点 `Copy HTML` → 粘贴到空白页，表格正常、不依赖外部 CSS
@@ -79,17 +79,18 @@
 
 **剩余可选调研**：
 - [ ] Reddit（r/printondemand, r/EtsySellers）验证卖家实际常用底衫（需配置凭证）
-- [ ] 评估二级缺口：`Hanes`（整个品牌缺失）、`Next Level 6210`（CVC）、`Lane Seven LS16008`（精品空白衫）
+- [ ] 评估剩余二级缺口：`Lane Seven LS16008`（精品空白衫）；Hanes / Next Level 6210 已加入
 
 ### 🔴 高优先级：尺寸数据官方核对（**上线前必须完成**）
 
-> ⚠️ **产品核心价值 = 数据准确**。当前 11 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
+> ⚠️ **产品核心价值 = 数据准确**。当前 14 个底衫的 flat measurements 为常用公开值/近似值，**上线前必须逐一对照官方规格表核对**。错误的尺码数据会直接导致买家退货，与产品初衷背道而驰。
 
 - [ ] Gildan 5000 / 64000 / 18500 / 18000 → 对照 Gildan 官网规格 PDF（gildan.com）
-- [ ] **Gildan 5000B（youth）→ 对照 Gildan 青少年规格表，重点核对（青少年尺寸最易出错）**
+- [ ] **Gildan 5000B / 18000B（youth）→ 对照 Gildan 青少年规格表，重点核对（青少年尺寸最易出错）**
+- [ ] Hanes 5180（Beefy-T）→ 对照 hanes.com 规格表
+- [ ] Next Level 3600 / 6210 → 对照 nextlevelapparel.com
 - [ ] Bella+Canvas 3001 → 对照 bellacanvas.com 规格表
 - [ ] Comfort Colors 1717 → 对照 comfortcolors.com
-- [ ] Next Level 3600 → 对照 nextlevelapparel.com
 - [ ] AS Colour 001 → 对照 ascolour.com（注意 AU/UK 版型差异）
 - [ ] Champion S700 → 对照 champion.com（仅 5 个尺码，无 3XL，需确认）
 - [ ] Russell Athletic 017M → 对照 russellathletic.com
