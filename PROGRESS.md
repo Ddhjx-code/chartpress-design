@@ -96,7 +96,7 @@
 | Bella+Canvas 3001 | 16.5→32 × 27→35（XS-5XL），官方无袖长列 | ✅ 已核实 | bellacanvas.com 官方规格 |
 | Comfort Colors 1717 | 18.25→29.75 × 26.625→33.5（S-4XL），袖长 center back 16.25→24.625 | ✅ 已核实 | comfortcolors.com 官方规格 |
 | Next Level 3600 | 17.5→34 × 27→36（XS-6XL），官方无袖长列 | ✅ 已核实 | nextlevelapparel.com 官方规格 |
-| Hanes 5180 | 18→28 × 28→33，一致 | 高 | hanes.com（Beefy-T） |
+| ~~Hanes 5180~~ | — | ❌ 已删除 | 官网/亚马逊仅提供体围对照表，无平铺尺寸，无法核实 |
 | Next Level 6210 | 同 3600 版型（XS-6XL），官方无袖长列 | ✅ 已核实 | nextlevelapparel.com 官方规格 |
 | AS Colour 001 | 17→31.5 × 26.75→35（XS-5XL），官方无袖长列，公差 ±1in | ✅ 已核实 | ascolour.com 官方规格 |
 | ~~Champion S700~~ | — | ❌ 已删除 | 搜索峰值仅 9（极低），型号/平铺尺寸无法核实 |
@@ -159,7 +159,7 @@ npx serve dist
 - [ ] 抽查几个型号页（如 `/gildan-5000-size-chart`）确认 200 + 表格正确
 - [ ] 主页 PNG 导出 / HTML 复制功能正常
 
-> ⚠️ **上线前唯一未决项**：Hanes 5180 的平铺尺寸仍是估算值（未官方核实）。上线前应核实或删除（见下方核验矩阵）。
+> ✅ **底衫数据已全部官方核实**：库内 13 个底衫全部对照官方平铺规格核实。Champion S700、Russell 017M、Hanes 5180 因无法获取平铺尺寸（仅体围表/型号存疑/搜索量低）已删除。
 
 ---
 

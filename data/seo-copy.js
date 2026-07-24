@@ -45,9 +45,6 @@ const SEO_COPY = {
   ascolour001: {
     blurb: "The AS Colour 001 Staple Tee is the Australian brand's signature blank — a 5.0 oz (170 GSM) 100% combed cotton tee with a clean, regular fit and a smooth print surface. A favorite for streetwear and merch in AU, UK, and NZ markets. If you sell outside North America, this is one of the most-requested blanks your buyers will recognize. Note: AS Colour's official tolerance is ±1 inch (looser than most brands) — advise buyers to size up on borderline fits. The official spec lists body width and length (measured flat).",
   },
-  hanes5180: {
-    blurb: "The Hanes 5180 Beefy-T is a heavyweight classic — 6.1 oz/yd² of 100% cotton with a sturdy, structured feel comparable to the Gildan 5000. The Beefy-T name is well known to buyers who specifically search for it, so a dedicated chart captures that branded search traffic. A dependable, no-surprises unisex adult tee.",
-  },
 };
 
 if (typeof module !== "undefined" && module.exports) {

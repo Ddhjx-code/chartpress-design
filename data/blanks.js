@@ -129,14 +129,6 @@ const BLANKS = {
       { s: "5XL", chest: 31.5, length: 35 },
     ],
   },
-  hanes5180: {
-    brand: "Hanes", model: "5180", name: "Beefy-T", slug: "hanes-5180",
-    sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 16 }, { s: "M", chest: 20, length: 29, sleeve: 17 },
-      { s: "L", chest: 22, length: 30, sleeve: 18 }, { s: "XL", chest: 24, length: 31, sleeve: 19 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 20 }, { s: "3XL", chest: 28, length: 33, sleeve: 21 },
-    ],
-  },
 };
 
 const THEMES = {
