@@ -107,3 +107,60 @@ Thanks for checking it out 🙏
 
 - 绑定正式域名（比 vercel.app 更专业，也利于 SEO）
 - 在 Vercel 设 `SITE_DOMAIN=https://你的域名` 重新部署，让 canonical/sitemap 指向正式域名
+
+---
+
+## 8. Logo 文生图 Prompt
+
+品牌基调：工业/服装印刷坊风格，红色「服装吊牌」菱形图标，配色 墨黑 #16191F / 纸白 #F6F5F0 / 裁缝红 #E8432A。
+
+### 方案 A：App 图标（红色吊牌，推荐用于 240×240）
+
+```
+A minimal flat app icon for a print-on-demand size chart tool. A single
+red clothing price tag shaped like a rotated square (diamond) with a small
+circular hole near the top corner, in tailor red #E8432A, centered on a
+warm paper-white background #F6F5F0. Clean vector style, sharp geometric
+edges, a subtle hard offset shadow in ink black #16191F. Industrial
+garment-printing aesthetic. No text, no gradients, bold and memorable,
+perfectly centered, suitable for a 240x240 app icon.
+```
+
+### 方案 B：图标 + 字标（横版完整 logo）
+
+```
+A bold industrial logo for "ChartPress", a size chart generator for
+print-on-demand sellers. Left: a red diamond-shaped clothing tag icon
+(rotated square with a circular hole) in tailor red #E8432A. Right: the
+wordmark "ChartPress" in a heavy condensed sans-serif (Archivo Black
+style), ink black #16191F, with "Press" in red. Warm paper-white
+background #F6F5F0. Workwear / print-shop aesthetic, flat vector, sharp
+edges, subtle hard shadow. Horizontal layout, clean and confident.
+```
+
+### 方案 C：徽章风（圆形贴纸感，适合社交头像）
+
+```
+A circular badge logo for "ChartPress". Inside the circle: a red diamond
+clothing tag and a dashed cut-line motif with tiny scissors, in tailor red
+#E8432A and ink black #16191F on paper white #F6F5F0. Vintage industrial
+print-shop sticker style, flat vector, bold outlines, no gradients.
+Centered, suitable for a square social avatar.
+```
+
+> 生成后建议：用矢量工具（Figma/Illustrator）重绘一版以保证清晰度，文生图
+> 主要用来快速定方向。最终 logo 导出 240×240 PNG（PH）+ 512×512（社交头像）。
+
+---
+
+## 9. Gallery 截图（已生成）
+
+位于 `launch/gallery/`（2x 高清，2540×1520）：
+- `01-hero.png` — 首屏（标题 + 尺码表预览）
+- `02-generator.png` — 生成器（选底衫 + 主题/单位 + 实时预览）
+- `03-chart.png` — 尺码表成品特写
+- `04-themes.png` — 5 主题切换
+- `05-seo-page.png` — 独立型号 SEO 页
+
+> PH gallery 推荐 1270×760，当前为 2x（2540×1520），上传时 PH 会自动适配，
+> 或自行缩放到 1270×760。
