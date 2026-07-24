@@ -124,12 +124,13 @@ function build() {
   }
 
   fs.writeFileSync(path.join(DIST, "sitemap.xml"), buildSitemap());
+  fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`);
 
   fs.copyFileSync(path.join(ROOT, "chartpress-design.html"), path.join(DIST, "index.html"));
   fs.mkdirSync(path.join(DIST, "data"), { recursive: true });
   fs.copyFileSync(path.join(ROOT, "data", "blanks.js"), path.join(DIST, "data", "blanks.js"));
 
-  console.log(`✓ Built ${count} size-chart pages + sitemap + index → ${DIST}`);
+  console.log(`✓ Built ${count} size-chart pages + sitemap + robots + index → ${DIST}`);
   console.log(`  Domain: ${DOMAIN}`);
 }
 

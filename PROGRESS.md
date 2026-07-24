@@ -138,6 +138,29 @@ npx serve dist
 ```
 > `dist/` 是构建产物，已 gitignore，不入库。部署时部署 `dist/` 目录。
 
+### 部署上线（M3）
+
+仓库已含 `vercel.json` 和 `netlify.toml`（二选一即可），构建命令 `node scripts/build-seo-pages.js`，输出目录 `dist/`。
+
+**Vercel（推荐）**：
+1. vercel.com → New Project → 导入 GitHub 仓库 `Ddhjx-code/chartpress-design`
+2. 框架自动识别（vercel.json）：Build Command = `node scripts/build-seo-pages.js`，Output = `dist`
+3. （可选）Environment Variables 设 `SITE_DOMAIN=https://你的域名`（默认 `https://chartpress.com`，影响 canonical 和 sitemap 里的 URL）
+4. Deploy → 得到 `xxx.vercel.app`，绑定自定义域名后设 `SITE_DOMAIN` 为正式域名重新部署
+
+**Netlify**：
+1. netlify.com → Add new site → Import from Git → 选仓库
+2. 自动读取 netlify.toml（build command + publish=dist）
+3. 同样可设 `SITE_DOMAIN` 环境变量
+
+**部署后必做**：
+- [ ] Google Search Console 提交 sitemap：`https://你的域名/sitemap.xml`
+- [ ] 验证 robots.txt 可访问：`https://你的域名/robots.txt`
+- [ ] 抽查几个型号页（如 `/gildan-5000-size-chart`）确认 200 + 表格正确
+- [ ] 主页 PNG 导出 / HTML 复制功能正常
+
+> ⚠️ **上线前唯一未决项**：Hanes 5180 的平铺尺寸仍是估算值（未官方核实）。上线前应核实或删除（见下方核验矩阵）。
+
 ---
 
 ## 如何在另一台机器继续
