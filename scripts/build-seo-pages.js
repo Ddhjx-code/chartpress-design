@@ -17,6 +17,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
+const STATIC = path.join(ROOT, "static");
 const DOMAIN = (process.env.SITE_DOMAIN || "https://chartpress.com").replace(/\/$/, "");
 
 const { BLANKS, THEMES } = require(path.join(ROOT, "data", "blanks.js"));
@@ -129,6 +130,10 @@ function build() {
   fs.copyFileSync(path.join(ROOT, "chartpress-design.html"), path.join(DIST, "index.html"));
   fs.mkdirSync(path.join(DIST, "data"), { recursive: true });
   fs.copyFileSync(path.join(ROOT, "data", "blanks.js"), path.join(DIST, "data", "blanks.js"));
+
+  if (fs.existsSync(STATIC)) {
+    fs.cpSync(STATIC, DIST, { recursive: true });
+  }
 
   console.log(`✓ Built ${count} size-chart pages + sitemap + robots + index → ${DIST}`);
   console.log(`  Domain: ${DOMAIN}`);
