@@ -99,8 +99,8 @@
 | Hanes 5180 | 18→28 × 28→33，一致 | 高 | hanes.com（Beefy-T） |
 | Next Level 6210 | 同 3600 版型（XS-6XL），官方无袖长列 | ✅ 已核实 | nextlevelapparel.com 官方规格 |
 | AS Colour 001 | 17→31.5 × 26.75→35（XS-5XL），官方无袖长列，公差 ±1in | ✅ 已核实 | ascolour.com 官方规格 |
-| Champion S700 | 20→28 × 27→31（5 码，无 3XL） | 中 | champion.com |
-| Russell Athletic 017M | 18→28 × 28→33，吻合 | 中 | russellathletic.com |
+| ~~Champion S700~~ | — | ❌ 已删除 | 搜索峰值仅 9（极低），型号/平铺尺寸无法核实 |
+| ~~Russell Athletic 017M~~ | — | ❌ 已删除 | 型号/平铺尺寸无法核实，搜索需求不明 |
 | Gildan 5000B（youth） | 16→20 × 20.5→26.5，含 XS，袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 5100P（toddler） | 11→15 × 15→19（2T-6T），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |
 | Gildan 5400B（youth LS） | 16→20 × 20.5→26.5（XS-XL），袖长 center back | ✅ 已核实 | gildan.com 官方规格 |

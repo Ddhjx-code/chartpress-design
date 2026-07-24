@@ -129,22 +129,6 @@ const BLANKS = {
       { s: "5XL", chest: 31.5, length: 35 },
     ],
   },
-  championS700: {
-    brand: "Champion", model: "S700", name: "Powerblend Hoodie", slug: "champion-s700",
-    sizes: [
-      { s: "S", chest: 20, length: 27, sleeve: 24 }, { s: "M", chest: 22, length: 28, sleeve: 24.5 },
-      { s: "L", chest: 24, length: 29, sleeve: 25 }, { s: "XL", chest: 26, length: 30, sleeve: 25.5 },
-      { s: "2XL", chest: 28, length: 31, sleeve: 26 },
-    ],
-  },
-  russell017M: {
-    brand: "Russell Athletic", model: "017M", name: "Dri-Power Tee", slug: "russell-athletic-017m",
-    sizes: [
-      { s: "S", chest: 18, length: 28, sleeve: 15.5 }, { s: "M", chest: 20, length: 29, sleeve: 16.25 },
-      { s: "L", chest: 22, length: 30, sleeve: 17 }, { s: "XL", chest: 24, length: 31, sleeve: 17.75 },
-      { s: "2XL", chest: 26, length: 32, sleeve: 18.5 }, { s: "3XL", chest: 28, length: 33, sleeve: 19.25 },
-    ],
-  },
   hanes5180: {
     brand: "Hanes", model: "5180", name: "Beefy-T", slug: "hanes-5180",
     sizes: [

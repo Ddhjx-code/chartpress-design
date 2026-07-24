@@ -45,12 +45,6 @@ const SEO_COPY = {
   ascolour001: {
     blurb: "The AS Colour 001 Staple Tee is the Australian brand's signature blank — a 5.0 oz (170 GSM) 100% combed cotton tee with a clean, regular fit and a smooth print surface. A favorite for streetwear and merch in AU, UK, and NZ markets. If you sell outside North America, this is one of the most-requested blanks your buyers will recognize. Note: AS Colour's official tolerance is ±1 inch (looser than most brands) — advise buyers to size up on borderline fits. The official spec lists body width and length (measured flat).",
   },
-  championS700: {
-    blurb: "The Champion S700 Powerblend Hoodie brings the iconic Champion brand to your POD line. Its mid-weight cotton-poly Powerblend fleece is soft, durable, and made to resist shrinkage and pilling, with the heritage Champion 'C' logo on the cuff. A strong choice when you want recognizable-brand hoodies in your shop.",
-  },
-  russell017M: {
-    blurb: "The Russell Athletic 017M Dri-Power Tee is a moisture-wicking performance blank built for active wear. Its cotton-poly Dri-Power fabric pulls sweat away from the body and dries fast — the right choice for gym, sports, and outdoor designs where a standard cotton tee would stay damp. Note its athletic cut when advising buyers on sizing.",
-  },
   hanes5180: {
     blurb: "The Hanes 5180 Beefy-T is a heavyweight classic — 6.1 oz/yd² of 100% cotton with a sturdy, structured feel comparable to the Gildan 5000. The Beefy-T name is well known to buyers who specifically search for it, so a dedicated chart captures that branded search traffic. A dependable, no-surprises unisex adult tee.",
   },
