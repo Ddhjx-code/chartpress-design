@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script defer src="https://chartpress-umami.vercel.app/script.js" data-website-id="639dab49-bca9-4e29-b05b-36abd374a661"></script>
 <style>
 :root{
   --paper:#F6F5F0;
@@ -763,6 +764,7 @@ document.getElementById("downloadBtn").addEventListener("click",async()=>{
     link.download = `${b.slug}-size-chart-${state.unit}.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
+    if(window.umami)umami.track("download_png",{blank:b.slug,unit:state.unit,theme:state.theme});
     toast(`⬇ <b>${b.brand} ${b.model}</b> chart pressed — PNG ready`);
   }catch(e){
     toast(`⚠ PNG export failed — please try again`);
@@ -780,6 +782,7 @@ document.getElementById("htmlBtn").addEventListener("click",async()=>{
     ta.value = snippet; document.body.appendChild(ta); ta.select();
     document.execCommand("copy"); document.body.removeChild(ta);
   }
+  if(window.umami)umami.track("copy_html",{blank:b.slug,unit:state.unit,theme:state.theme});
   toast(`&lt;/&gt; HTML snippet for <b>${b.brand} ${b.model}</b> copied`);
 });
 
