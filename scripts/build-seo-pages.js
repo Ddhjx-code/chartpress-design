@@ -10,7 +10,7 @@
  *   dist/data/blanks.js                 (for the main tool)
  *
  * Usage:  node scripts/build-seo-pages.js
- * Env:    SITE_DOMAIN (default https://chartpress.com)
+ * Env:    SITE_DOMAIN (optional; otherwise uses Vercel's VERCEL_URL)
  */
 const fs = require("fs");
 const path = require("path");
@@ -18,7 +18,10 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
 const STATIC = path.join(ROOT, "static");
-const DOMAIN = (process.env.SITE_DOMAIN || "https://chartpress.com").replace(/\/$/, "");
+const DOMAIN = (
+  process.env.SITE_DOMAIN ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:8888")
+).replace(/\/$/, "");
 
 const { BLANKS, THEMES } = require(path.join(ROOT, "data", "blanks.js"));
 const { SEO_COPY } = require(path.join(ROOT, "data", "seo-copy.js"));
