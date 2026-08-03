@@ -115,6 +115,15 @@ function buildSitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 }
 
+function deployIndexNowKey() {
+  const keyFile = path.join(ROOT, "indexnow-key.txt");
+  if (!fs.existsSync(keyFile)) return null;
+  const key = fs.readFileSync(keyFile, "utf8").trim();
+  if (!key) return null;
+  fs.writeFileSync(path.join(DIST, `${key}.txt`), key);
+  return key;
+}
+
 function build() {
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.mkdirSync(DIST, { recursive: true });
@@ -138,8 +147,11 @@ function build() {
     fs.cpSync(STATIC, DIST, { recursive: true });
   }
 
+  const indexNowKey = deployIndexNowKey();
+
   console.log(`✓ Built ${count} size-chart pages + sitemap + robots + index → ${DIST}`);
   console.log(`  Domain: ${DOMAIN}`);
+  if (indexNowKey) console.log(`  IndexNow key deployed → /${indexNowKey}.txt`);
 }
 
 build();

@@ -1,0 +1,38 @@
+name: IndexNow submit
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Give Vercel time to finish deploying, then verify the key file is live
+      # before pinging IndexNow (retry up to ~5 minutes).
+      - name: Wait for Vercel deploy
+        run: |
+          KEY=$(cat indexnow-key.txt)
+          for i in $(seq 1 15); do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://chartpress-design.vercel.app/${KEY}.txt")
+            if [ "$CODE" = "200" ]; then
+              echo "Key file is live."
+              exit 0
+            fi
+            echo "Deploy not ready yet (HTTP $CODE), retrying in 20s... ($i/15)"
+            sleep 20
+          done
+          echo "::error::Key file never became live — aborting."
+          exit 1
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow-submit.js
+        env:
+          SITE_DOMAIN: https://chartpress-design.vercel.app
