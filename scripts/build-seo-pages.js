@@ -139,7 +139,10 @@ function build() {
   fs.writeFileSync(path.join(DIST, "sitemap.xml"), buildSitemap());
   fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`);
 
-  fs.copyFileSync(path.join(ROOT, "chartpress-design.html"), path.join(DIST, "index.html"));
+  const indexHtml = fs
+    .readFileSync(path.join(ROOT, "chartpress-design.html"), "utf8")
+    .replace(/\{\{SITE_ORIGIN\}\}/g, DOMAIN);
+  fs.writeFileSync(path.join(DIST, "index.html"), indexHtml);
   fs.mkdirSync(path.join(DIST, "data"), { recursive: true });
   fs.copyFileSync(path.join(ROOT, "data", "blanks.js"), path.join(DIST, "data", "blanks.js"));
 
